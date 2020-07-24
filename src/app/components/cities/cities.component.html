@@ -1,0 +1,29 @@
+<div class="d-inline-block m-2 p-2 text-white" id="city">
+  <a (click)="onloadingCity(index)">
+    <div *ngIf="time.isDay" id="weatherRow" class="pb-4">
+      <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="!time.isDay" id="weatherRow" class="pb-4">
+      <i class="fas fa-3x fa-moon moon"></i>
+    </div>
+    <div id="weatherRow" style="margin-top: -50px;">
+      <i class="fas fa-3x fa-cloud cloud"></i>
+    </div>
+
+    <div id="weatherRow" class="w-auto p-2 lead font-weight-bold">
+      {{ city.main.temp }}°C
+    </div>
+    <div id="weatherRow" class="w-auto">
+      High: {{ city.main.temp_max }}° / Low: {{ city.main.temp_min }}°
+    </div>
+    <div id="weatherRow" class="w-auto pt-2 lead font-weight-bold">
+      {{ city.name }}
+    </div>
+    <div id="weatherRow" class="w-auto text-uppercase">
+      {{ city.description }}
+    </div>
+    <div id="weatherRow" class="w-auto">
+      Humidity: {{ city.main.humidity }}%
+    </div>
+  </a>
+</div>

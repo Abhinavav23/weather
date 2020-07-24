@@ -1,0 +1,42 @@
+#city {
+  width: 250px;
+  height: 280px;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: #00003f;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#weatherRow {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.sun {
+  margin-top: 10px;
+  color: #ffff4d;
+  filter: drop-shadow(1px 1px 10px #ffff4d);
+}
+.moon {
+  margin-top: 10px;
+  color: #f4f1c9;
+  filter: drop-shadow(1px 1px 10px #f4f1c9);
+}
+.cloud {
+  color: #9fd7fb;
+  filter: drop-shadow(1px 1px 5px #9fd7fb);
+  animation-name: cloudMovement;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes cloudMovement {
+  from {
+    margin-left: -75px;
+  }
+  to {
+    margin-left: 75px;
+  }
+}

@@ -1,0 +1,12 @@
+#city {
+    height: 300px;
+    border-radius: 10px;
+    background: #00003f;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #weatherRow {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+  }

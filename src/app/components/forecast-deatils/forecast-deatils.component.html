@@ -1,0 +1,36 @@
+<div class="container border rounded border-secondry p-2 mt-2">
+  <h3 class="border rounded border-secondry bg-dark text-white p-2">
+    7 DAYS FORECAST for {{cityName}}
+  </h3>
+  <ng-container *ngFor="let i of [].constructor(7); let in = index">
+    <div class="d-inline-block m-2 p-2 text-white" id="city">
+
+      <div id="weatherRow" class="w-auto pt-2 lead font-weight-bold">
+        {{ citiInfo?.daily[in].date }} {{ citiInfo?.daily[in].month }}
+      </div>
+      <div id="weatherRow" class="w-auto">
+        {{ citiInfo?.daily[in].day }}
+      </div>
+      <div id="weatherRow" class="w-auto pt-2 lead font-weight-bold">
+        {{ citiInfo?.daily[in].temp.day }}°
+      </div>
+      <div id="weatherRow" class="w-auto">
+        High: {{ citiInfo?.daily[in].temp.max }}° / Low:
+        {{ citiInfo?.daily[in].temp.min }}°
+      </div>
+      <div id="weatherRow" class="w-auto">
+        {{ citiInfo?.daily[in].weather[0].description }}
+      </div>
+      <div id="weatherRow" class="w-auto">
+        Humidity: {{ citiInfo?.daily[in].humidity }}%
+      </div>
+      <div id="weatherRow" class="w-auto">
+        Clouds: {{ citiInfo?.daily[in].clouds }}%
+      </div>
+      <div id="weatherRow" class="w-auto">
+        Wind-Speed: {{ citiInfo?.daily[in].wind_speed }}km/h
+      </div>
+    </div>
+  </ng-container>
+</div>
+
