@@ -11,10 +11,10 @@
     </div>
 
     <div id="weatherRow" class="w-auto p-2 lead font-weight-bold">
-      {{ city.main.temp }}°C
+      {{ city.temp }}°C
     </div>
     <div id="weatherRow" class="w-auto">
-      High: {{ city.main.temp_max }}° / Low: {{ city.main.temp_min }}°
+      High: {{ city.temp_max }}° / Low: {{ city.temp_min }}°
     </div>
     <div id="weatherRow" class="w-auto pt-2 lead font-weight-bold">
       {{ city.name }}
@@ -23,7 +23,7 @@
       {{ city.description }}
     </div>
     <div id="weatherRow" class="w-auto">
-      Humidity: {{ city.main.humidity }}%
+      Humidity: {{ city.humidity }}%
     </div>
   </a>
 </div>

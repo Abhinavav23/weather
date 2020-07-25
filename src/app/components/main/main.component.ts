@@ -20,14 +20,16 @@ export class MainComponent implements OnInit {
       )
       .subscribe((data) => {
         this.weatherData = data;
-        console.log(this.weatherData);
         for (var i = 0; i < this.weatherData.cnt; i++) {
           var city = new CityModel(
             this.weatherData.list[i].name,
             this.weatherData.list[i].id,
             this.weatherData.list[i].coord.lat,
             this.weatherData.list[i].coord.lon,
-            this.weatherData.list[i].main,
+            this.weatherData.list[i].main.temp,
+            this.weatherData.list[i].main.temp_max,
+            this.weatherData.list[i].main.temp_min,
+            this.weatherData.list[i].main.humidity,
             this.weatherData.list[i].sys.sunset,
             this.weatherData.list[i].weather[0].description
           );
