@@ -1,6 +1,10 @@
-<app-cities
-*ngFor = "let city of cities; let i= index"
-[city] = city
-[index]= 'i'
->
-</app-cities>
+<div class="container text-center">
+    <app-cities
+    *ngFor = "let city of cities | SearchFilterCity: searchValue; let i= index"
+    [city] = city
+    [index]= 'i'
+    >
+    </app-cities>
+</div>
+
+

@@ -6,4 +6,6 @@ import { Subject } from "rxjs";
 export class CityService {
   CitiesChanged = new Subject<CityModel[]>();
   citiInfo = new Subject<any>();
+  cityname  = new Subject<any>();
+  searchValue  = new Subject<any>();
 }

@@ -1,10 +1,36 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-white">
   <div class="container">
-    <h3 class="navbar-brand">Weather Report</h3>
+    <a routerLink="./" routerLinkActive="active" class="navbar-brand nav-link"
+      >Weather Report</a>
+    <form class="form-inline" #form ="ngForm">
+      <div clickOutside (clickOutside)="removeDropdown()" class="pos-relative">
+        <input
+        value="{{searchValue}}"
+        type="text"
+        class="form-control mr-2"
+        (click)="toggleDropdown()"
+        required
+        ngModel
+        name="cityname"
+        placeholder="Search for your City"/>
+        <div class="dropdown-Container" *ngIf = "showDropdown">
+          <div >
+            <div (click)= "getvalue(c)" *ngFor= "let c of cities | SearchFilter: getsearchValue()" class="cities p-2">
+              {{c}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button (click)="onSearch()"class="btn btn-outline-info pt-2"><i class="fa fa-search"></i></button>
+    </form>
     <ul class="navbar-nav">
-      <li class="nav-item"><a routerLink = './' routerLinkActive="active" class="nav-link">Top Cities</a></li>
+      <li class="nav-item">
+        <a routerLink="./" routerLinkActive="active" class="nav-link"
+          >Top Cities</a>
+      </li>
     </ul>
   </div>
 </nav>
 <router-outlet></router-outlet>
-<br>
+<br />
